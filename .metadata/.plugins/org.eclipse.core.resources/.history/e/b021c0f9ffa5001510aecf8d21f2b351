@@ -1,0 +1,91 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.Color;
+
+public class Hypertrophy extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Hypertrophy frame = new Hypertrophy();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Hypertrophy() {
+		setTitle("Hypertrophy");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 330, 337);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(153, 204, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnx = new JButton("3x10");
+		btnx.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx.setBounds(59, 73, 89, 41);
+		contentPane.add(btnx);
+		
+		JButton btnx_1 = new JButton("3x12");
+		btnx_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_1.setBounds(169, 73, 89, 41);
+		contentPane.add(btnx_1);
+		
+		JButton btnx_2 = new JButton("4x8");
+		btnx_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_2.setBounds(59, 125, 89, 41);
+		contentPane.add(btnx_2);
+		
+		JButton btnx_3 = new JButton("4x10");
+		btnx_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_3.setBounds(169, 125, 89, 41);
+		contentPane.add(btnx_3);
+		
+		JButton btnx_4 = new JButton("4x12");
+		btnx_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_4.setBounds(59, 177, 89, 41);
+		contentPane.add(btnx_4);
+		
+		JButton btnx_5 = new JButton("5x6");
+		btnx_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_5.setBounds(169, 177, 89, 41);
+		contentPane.add(btnx_5);
+		
+		JLabel label = new JLabel("sets x reps");
+		label.setFont(new Font("Tahoma", Font.BOLD, 14));
+		label.setBounds(68, 48, 80, 14);
+		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("sets x reps");
+		label_1.setFont(new Font("Tahoma", Font.BOLD, 14));
+		label_1.setBounds(178, 48, 80, 14);
+		contentPane.add(label_1);
+		
+		JLabel label_2 = new JLabel("Choose a set/rep range:");
+		label_2.setFont(new Font("Vani", Font.BOLD, 22));
+		label_2.setBounds(20, 13, 294, 49);
+		contentPane.add(label_2);
+	}
+
+}

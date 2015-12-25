@@ -1,0 +1,106 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import java.awt.SystemColor;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
+
+public class DUPGUI {
+
+	private JFrame frmDailyUndulatingPeriodization;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DUPGUI window = new DUPGUI();
+					window.frmDailyUndulatingPeriodization.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public DUPGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmDailyUndulatingPeriodization = new JFrame();
+		frmDailyUndulatingPeriodization.setTitle("Daily Undulating Periodization");
+		frmDailyUndulatingPeriodization.setBounds(100, 100, 314, 275);
+		frmDailyUndulatingPeriodization.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmDailyUndulatingPeriodization.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 0, 298, 237);
+		frmDailyUndulatingPeriodization.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel label = new JLabel("Please Enter Your One Rep Max:");
+		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		label.setBounds(20, 125, 256, 27);
+		panel.add(label);
+		
+		JRadioButton radioButton = new JRadioButton("Pounds(lbs)");
+		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		radioButton.setBackground(new Color(0, 153, 204));
+		radioButton.setBounds(96, 66, 109, 23);
+		panel.add(radioButton);
+		
+		JRadioButton radioButton_1 = new JRadioButton("Kilograms(k)");
+		radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		radioButton_1.setBackground(new Color(0, 153, 204));
+		radioButton_1.setBounds(96, 40, 109, 23);
+		panel.add(radioButton_1);
+		
+		JButton button = new JButton("Continue");
+		button.setFont(new Font("Tahoma", Font.BOLD, 12));
+		button.setBounds(86, 157, 96, 39);
+		panel.add(button);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(225, 186, 49, 20);
+		panel.add(textPane);
+		
+		JLabel label_1 = new JLabel("Select Your Unit of Measurement:\r\n");
+		label_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		label_1.setBounds(20, 6, 282, 27);
+		panel.add(label_1);
+		
+		JLabel label_2 = new JLabel("");
+		label_2.setBounds(214, 163, 36, 14);
+		panel.add(label_2);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(0, 0, 298, 237);
+		frmDailyUndulatingPeriodization.getContentPane().add(panel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(0, 0, 298, 237);
+		frmDailyUndulatingPeriodization.getContentPane().add(panel_2);
+		
+		//Group radio buttons together.
+		ButtonGroup group = new ButtonGroup();
+		
+	}
+}

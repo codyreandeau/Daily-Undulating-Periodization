@@ -1,0 +1,83 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import java.awt.Color;
+import javax.swing.JTextPane;
+
+public class yes {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					yes window = new yes();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public yes() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton button = new JButton("Continue");
+		button.setFont(new Font("Tahoma", Font.BOLD, 12));
+		button.setBounds(82, 104, 96, 39);
+		frame.getContentPane().add(button);
+		
+		JLabel label = new JLabel("Please Enter Your One Rep Max:");
+		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		label.setBounds(66, 28, 256, 27);
+		frame.getContentPane().add(label);
+		
+		JRadioButton radioButton = new JRadioButton("Pounds(lbs)");
+		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		radioButton.setBackground(new Color(0, 153, 204));
+		radioButton.setBounds(176, 81, 109, 23);
+		frame.getContentPane().add(radioButton);
+		
+		JRadioButton radioButton_1 = new JRadioButton("Kilograms(k)");
+		radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		radioButton_1.setBackground(new Color(0, 153, 204));
+		radioButton_1.setBounds(199, 155, 109, 23);
+		frame.getContentPane().add(radioButton_1);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(109, 182, 49, 20);
+		frame.getContentPane().add(textPane);
+		
+		JLabel label_1 = new JLabel("Select Your Unit of Measurement:\r\n");
+		label_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		label_1.setBounds(69, 224, 282, 27);
+		frame.getContentPane().add(label_1);
+		
+		JLabel label_2 = new JLabel("");
+		label_2.setBounds(168, 188, 36, 14);
+		frame.getContentPane().add(label_2);
+	}
+
+}

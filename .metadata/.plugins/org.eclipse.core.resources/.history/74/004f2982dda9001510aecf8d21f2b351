@@ -1,0 +1,184 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Template extends JFrame {
+
+	private JPanel contentPane;
+	/**
+	 * Create the frame.
+	 */
+	public Template() {
+		setTitle("Your Template");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 469);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(153, 204, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblDay = new JLabel("Day 1:");
+		lblDay.setForeground(new Color(102, 0, 0));
+		lblDay.setFont(new Font("Vani", Font.BOLD, 22));
+		lblDay.setBounds(10, 29, 84, 49);
+		contentPane.add(lblDay);
+		
+		JLabel lblDay_1 = new JLabel("Day 2:");
+		lblDay_1.setForeground(new Color(102, 0, 0));
+		lblDay_1.setFont(new Font("Vani", Font.BOLD, 22));
+		lblDay_1.setBounds(10, 150, 84, 49);
+		contentPane.add(lblDay_1);
+		
+		JLabel lblDay_2 = new JLabel("Day 3:");
+		lblDay_2.setForeground(new Color(102, 0, 0));
+		lblDay_2.setFont(new Font("Vani", Font.BOLD, 22));
+		lblDay_2.setBounds(10, 281, 84, 49);
+		contentPane.add(lblDay_2);
+		
+		JLabel lblSquat = new JLabel("- Squat:");
+		lblSquat.setFont(new Font("Vani", Font.BOLD, 16));
+		lblSquat.setBounds(33, 54, 74, 60);
+		contentPane.add(lblSquat);
+		
+		JLabel lblSquat_1 = new JLabel("- Squat:");
+		lblSquat_1.setFont(new Font("Vani", Font.BOLD, 16));
+		lblSquat_1.setBounds(33, 177, 74, 60);
+		contentPane.add(lblSquat_1);
+		
+		JLabel lblSquat_2 = new JLabel("- Squat:");
+		lblSquat_2.setFont(new Font("Vani", Font.BOLD, 16));
+		lblSquat_2.setBounds(33, 308, 74, 60);
+		contentPane.add(lblSquat_2);
+		
+		JLabel lblBench = new JLabel("- Bench:");
+		lblBench.setFont(new Font("Vani", Font.BOLD, 16));
+		lblBench.setBounds(33, 85, 86, 60);
+		contentPane.add(lblBench);
+		
+		JLabel lblBench_1 = new JLabel("- Bench:");
+		lblBench_1.setFont(new Font("Vani", Font.BOLD, 16));
+		lblBench_1.setBounds(33, 210, 86, 60);
+		contentPane.add(lblBench_1);
+		
+		JLabel lblBench_2 = new JLabel("- Bench:");
+		lblBench_2.setFont(new Font("Vani", Font.BOLD, 16));
+		lblBench_2.setBounds(33, 341, 86, 60);
+		contentPane.add(lblBench_2);
+		
+		JLabel lblDeadlift = new JLabel("- Deadlift:");
+		lblDeadlift.setFont(new Font("Vani", Font.BOLD, 16));
+		lblDeadlift.setBounds(21, 117, 95, 60);
+		contentPane.add(lblDeadlift);
+		
+		JLabel lblDeadlift_1 = new JLabel("- Deadlift:");
+		lblDeadlift_1.setFont(new Font("Vani", Font.BOLD, 16));
+		lblDeadlift_1.setBounds(21, 237, 95, 71);
+		contentPane.add(lblDeadlift_1);
+		
+		JLabel lblDeadlift_2 = new JLabel("- Deadlift:");
+		lblDeadlift_2.setFont(new Font("Vani", Font.BOLD, 16));
+		lblDeadlift_2.setBounds(21, 371, 95, 60);
+		contentPane.add(lblDeadlift_2);
+		
+		JLabel lblSquatPower = new JLabel("");
+		lblSquatPower.setForeground(new Color(204, 0, 204));
+		lblSquatPower.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblSquatPower.setBounds(104, 54, 148, 52);
+		contentPane.add(lblSquatPower);
+		
+		JLabel lblBenchStrength = new JLabel("");
+		lblBenchStrength.setForeground(new Color(204, 0, 204));
+		lblBenchStrength.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblBenchStrength.setBounds(114, 91, 138, 39);
+		contentPane.add(lblBenchStrength);
+		
+		JLabel lblDeadliftHypertrophy = new JLabel("");
+		lblDeadliftHypertrophy.setForeground(new Color(204, 0, 204));
+		lblDeadliftHypertrophy.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblDeadliftHypertrophy.setBounds(114, 127, 148, 39);
+		contentPane.add(lblDeadliftHypertrophy);
+		
+		JLabel lblSquatHypertrophy = new JLabel("");
+		lblSquatHypertrophy.setForeground(new Color(204, 0, 204));
+		lblSquatHypertrophy.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblSquatHypertrophy.setBounds(104, 177, 162, 49);
+		contentPane.add(lblSquatHypertrophy);
+		
+		JLabel lblBenchHypertrophy = new JLabel("");
+		lblBenchHypertrophy.setForeground(new Color(204, 0, 204));
+		lblBenchHypertrophy.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblBenchHypertrophy.setBounds(114, 218, 162, 39);
+		contentPane.add(lblBenchHypertrophy);
+		
+		JLabel lblDeadliftPower = new JLabel("");
+		lblDeadliftPower.setForeground(new Color(204, 0, 204));
+		lblDeadliftPower.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblDeadliftPower.setBounds(114, 247, 162, 39);
+		contentPane.add(lblDeadliftPower);
+		
+		JLabel lblSquatStrength = new JLabel("");
+		lblSquatStrength.setForeground(new Color(204, 0, 204));
+		lblSquatStrength.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblSquatStrength.setBounds(104, 308, 162, 52);
+		contentPane.add(lblSquatStrength);
+		
+		JLabel lblBenchPower = new JLabel("");
+		lblBenchPower.setForeground(new Color(204, 0, 204));
+		lblBenchPower.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblBenchPower.setBounds(114, 347, 148, 39);
+		contentPane.add(lblBenchPower);
+		
+		JLabel lblDeadliftStrength = new JLabel("");
+		lblDeadliftStrength.setForeground(new Color(204, 0, 204));
+		lblDeadliftStrength.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblDeadliftStrength.setBounds(118, 371, 148, 49);
+		contentPane.add(lblDeadliftStrength);
+		
+		if (Intensity.squatClick >= 1 )
+		{
+			lblSquatPower.setText(Power.setsReps + " @" + Power.weight);
+			lblSquatHypertrophy.setText(Hypertrophy.setsReps + " @" + Hypertrophy.weight);
+			lblSquatStrength.setText(Strength.setsReps + " @" + Strength.weight);
+			Intensity.squatClick = 0;
+		}
+		
+		if (Intensity.benchClick >= 1)
+		{
+			lblBenchPower.setText(Power.setsReps + " @" + Power.weight);
+			lblBenchHypertrophy.setText(Hypertrophy.setsReps + " @" + Hypertrophy.weight);
+			lblBenchStrength.setText(Strength.setsReps + " @" + Strength.weight);
+			Intensity.benchClick = 0;
+		}
+		
+		if (Intensity.deadliftClick >= 1)
+		{
+			lblDeadliftPower.setText(Power.setsReps + " @" + Power.weight);
+			lblDeadliftHypertrophy.setText(Hypertrophy.setsReps + " @" + Hypertrophy.weight);
+			lblDeadliftStrength.setText(Strength.setsReps + " @" + Strength.weight);
+			Intensity.deadliftClick = 0;
+		}
+		
+		JButton btnNewButton = new JButton("Home");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				contentPane.setVisible(false);
+				DUPGUI homePage = new DUPGUI();
+				homePage.frmDailyUndulatingPeriodization.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(291, 325, 111, 61);
+		contentPane.add(btnNewButton);
+		
+	}
+
+}

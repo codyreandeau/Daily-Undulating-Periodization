@@ -1,0 +1,101 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Window;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Intensity extends JFrame {
+
+	private JPanel contentPane;
+	Power showPower = new Power();
+	public static int squatClick = 0;
+	public static int benchClick = 0;
+	public static int deadliftClick = 0;
+	
+	
+	/**
+	 * Create the frame.
+	 */
+	public Intensity() {
+		setTitle("Intensity");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 287, 316);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(153, 204, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnSquat = new JButton("Squat");
+		btnSquat.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Show the power window
+				squatClick++;
+				contentPane.setVisible(false);
+				showPower.setVisible(true);
+			}
+		});
+		btnSquat.setBackground(new Color(255, 153, 0));
+		btnSquat.setFont(new Font("Verdana", Font.BOLD, 12));
+		btnSquat.setBounds(71, 64, 132, 40);
+		contentPane.add(btnSquat);
+		
+		JButton btnBench = new JButton("Bench");
+		btnBench.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Show the strength window
+				benchClick++;
+				contentPane.setVisible(false);
+				showPower.setVisible(true);
+			}
+		});
+		btnBench.setBackground(new Color(0, 255, 51));
+		btnBench.setFont(new Font("Verdana", Font.BOLD, 12));
+		btnBench.setBounds(71, 115, 132, 40);
+		contentPane.add(btnBench);
+		
+		JButton btnDeadlift = new JButton("Deadlift");
+		btnDeadlift.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//Show the strength screen
+				deadliftClick++;
+				contentPane.setVisible(false);
+				showPower.setVisible(true);
+				}
+		});
+		btnDeadlift.setBackground(new Color(255, 51, 255));
+		btnDeadlift.setFont(new Font("Verdana", Font.BOLD, 12));
+		btnDeadlift.setBounds(71, 166, 132, 40);
+		contentPane.add(btnDeadlift);
+		
+		JLabel lblChooseExercise = new JLabel("Choose Exercise:");
+		lblChooseExercise.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblChooseExercise.setBounds(71, 23, 177, 27);
+		contentPane.add(lblChooseExercise);
+		
+		JButton btnBack = new JButton("Back ");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			//Go back to DUPGUI
+			contentPane.setVisible(false);
+			DUPGUI back = new DUPGUI();
+			back.frmDailyUndulatingPeriodization.setVisible(true);
+			}
+		});
+		btnBack.setBackground(new Color(255, 0, 0));
+		btnBack.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnBack.setBounds(10, 227, 64, 40);
+		contentPane.add(btnBack);
+		
+		
+	}
+
+}

@@ -1,0 +1,117 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Window;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Intensity extends JFrame {
+
+	private JPanel contentPane;
+	public JLabel lblPass = new JLabel("New label");;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Intensity frame = new Intensity();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Intensity() {
+		setTitle("Intensity");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 287, 316);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(153, 204, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblPass = new JLabel("");
+		lblPass.setBounds(191, 240, 46, 14);
+		contentPane.add(lblPass);
+		
+		JButton btnPower = new JButton("Power");
+		btnPower.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Show the power window
+				contentPane.setVisible(false);
+				Power showPower = new Power();
+				showPower.setVisible(true);
+			}
+		});
+		btnPower.setBackground(new Color(255, 153, 0));
+		btnPower.setFont(new Font("Verdana", Font.BOLD, 12));
+		btnPower.setBounds(71, 64, 132, 40);
+		contentPane.add(btnPower);
+		
+		JButton btnStrength = new JButton("Strength");
+		btnStrength.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Show the strength window
+				contentPane.setVisible(false);
+				Strength showStrength = new Strength();
+				showStrength.setVisible(true);
+			}
+		});
+		btnStrength.setBackground(new Color(0, 255, 51));
+		btnStrength.setFont(new Font("Verdana", Font.BOLD, 12));
+		btnStrength.setBounds(71, 115, 132, 40);
+		contentPane.add(btnStrength);
+		
+		JButton btnHypertrophy = new JButton("Hypertrophy");
+		btnHypertrophy.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//Show the strength screen
+				contentPane.setVisible(false);
+				Hypertrophy showHypertrophy = new Hypertrophy();
+				showHypertrophy.setVisible(true);
+				
+			}
+		});
+		btnHypertrophy.setBackground(new Color(255, 51, 255));
+		btnHypertrophy.setFont(new Font("Verdana", Font.BOLD, 12));
+		btnHypertrophy.setBounds(71, 166, 132, 40);
+		contentPane.add(btnHypertrophy);
+		
+		JLabel lblSelectTheIntensity = new JLabel("Select the Intensity:");
+		lblSelectTheIntensity.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblSelectTheIntensity.setBounds(60, 23, 177, 27);
+		contentPane.add(lblSelectTheIntensity);
+		
+		JButton btnBack = new JButton("Back ");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			//Go back to DUPGUI
+			contentPane.setVisible(false);
+			DUPGUI back = new DUPGUI();
+			back.frmDailyUndulatingPeriodization.setVisible(true);
+			}
+		});
+		btnBack.setBackground(new Color(255, 0, 0));
+		btnBack.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnBack.setBounds(10, 227, 64, 40);
+		contentPane.add(btnBack);
+		
+	}
+
+}

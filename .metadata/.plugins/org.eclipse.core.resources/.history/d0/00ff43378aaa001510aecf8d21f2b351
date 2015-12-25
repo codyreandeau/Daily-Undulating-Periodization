@@ -1,0 +1,193 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Strength extends JFrame {
+
+	private JPanel contentPane;
+	double calculate;
+	public static String weight;
+	public static String setsReps;
+	
+	public double passValue()
+	{
+		return DUPGUI.weight;
+	}
+	
+	public String passUnit()
+	{
+		return DUPGUI.unit;
+	}
+	
+	/**
+	 * Create the frame.
+	 */
+	public Strength() {
+		setTitle("Strength");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 338, 430);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(153, 204, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel label = new JLabel("sets x reps");
+		label.setFont(new Font("Tahoma", Font.BOLD, 14));
+		label.setBounds(63, 49, 80, 14);
+		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("sets x reps");
+		label_1.setFont(new Font("Tahoma", Font.BOLD, 14));
+		label_1.setBounds(173, 49, 80, 14);
+		contentPane.add(label_1);
+		
+		JLabel lblChooseRepsSets = new JLabel("Set up your 'Strength' Day:");
+		lblChooseRepsSets.setFont(new Font("Vani", Font.BOLD, 22));
+		lblChooseRepsSets.setBounds(10, 11, 314, 49);
+		contentPane.add(lblChooseRepsSets);
+		
+		JLabel label_3 = new JLabel("You should use:");
+		label_3.setFont(new Font("Vani", Font.BOLD, 16));
+		label_3.setBounds(10, 282, 157, 60);
+		contentPane.add(label_3);
+		
+		JLabel lblCalculation = new JLabel("");
+		lblCalculation.setForeground(new Color(204, 0, 204));
+		lblCalculation.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblCalculation.setBounds(145, 272, 80, 70);
+		contentPane.add(lblCalculation);
+		
+		JLabel label_5 = new JLabel("for a:");
+		label_5.setFont(new Font("Vani", Font.BOLD, 16));
+		label_5.setBounds(214, 282, 60, 60);
+		contentPane.add(label_5);
+		
+		JLabel lblSetsReps = new JLabel("");
+		lblSetsReps.setForeground(new Color(204, 0, 204));
+		lblSetsReps.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblSetsReps.setBounds(262, 272, 42, 70);
+		contentPane.add(lblSetsReps);
+		
+		JButton btn3x5 = new JButton("3x5");
+		btn3x5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .8;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("3x5.");
+			}
+		});
+		btn3x5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn3x5.setBounds(54, 74, 89, 41);
+		contentPane.add(btn3x5);
+		
+		JButton btn3x6 = new JButton("3x6");
+		btn3x6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .77;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("3x6.");
+			}
+		});
+		btn3x6.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn3x6.setBounds(164, 74, 89, 41);
+		contentPane.add(btn3x6);
+		
+		JButton btn4x4 = new JButton("4x4");
+		btn4x4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .8;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("4x4.");
+			}
+		});
+		btn4x4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn4x4.setBounds(54, 126, 89, 41);
+		contentPane.add(btn4x4);
+		
+		JButton btn4x5 = new JButton("4x5");
+		btn4x5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .77;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("4x5.");
+			}
+		});
+		btn4x5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn4x5.setBounds(164, 126, 89, 41);
+		contentPane.add(btn4x5);
+		
+		JButton btn4x6 = new JButton("4x6");
+		btn4x6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .75;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("4x6.");
+			}
+		});
+		btn4x6.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn4x6.setBounds(54, 178, 89, 41);
+		contentPane.add(btn4x6);
+		
+		JButton btn5x4 = new JButton("5x4");
+		btn5x4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .77;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("5x4.");
+			}
+		});
+		btn5x4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn5x4.setBounds(164, 178, 89, 41);
+		contentPane.add(btn5x4);
+		
+		JButton btn5x5 = new JButton("5x5");
+		btn5x5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .75;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("5x5.");
+			}
+		});
+		btn5x5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn5x5.setBounds(54, 230, 89, 41);
+		contentPane.add(btn5x5);
+		
+		JButton btn6x4 = new JButton("6x4");
+		btn6x4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				calculate = passValue() * .75;
+				lblCalculation.setText(String.format("%.0f", calculate) + " " + passUnit());
+				lblSetsReps.setText("6x4.");
+			}
+		});
+		btn6x4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn6x4.setBounds(164, 230, 89, 41);
+		contentPane.add(btn6x4);
+		
+		JButton btnChoose = new JButton("Choose");
+		btnChoose.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				Hypertrophy showHypertrophy = new Hypertrophy();
+				showHypertrophy.setVisible(true);
+				weight = lblCalculation.getText();
+				setsReps = lblSetsReps.getText();
+			}
+		});
+		btnChoose.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnChoose.setBackground(Color.GREEN);
+		btnChoose.setBounds(108, 342, 89, 39);
+		contentPane.add(btnChoose);
+		
+	}
+}

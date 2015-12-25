@@ -1,0 +1,63 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import java.awt.SystemColor;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+
+public class DUPGUI {
+
+	private JFrame frmDailyUndulatingPeriodization;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DUPGUI window = new DUPGUI();
+					window.frmDailyUndulatingPeriodization.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public DUPGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmDailyUndulatingPeriodization = new JFrame();
+		frmDailyUndulatingPeriodization.setTitle("Daily Undulating Periodization");
+		frmDailyUndulatingPeriodization.setBounds(100, 100, 314, 275);
+		frmDailyUndulatingPeriodization.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmDailyUndulatingPeriodization.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 0, 298, 237);
+		frmDailyUndulatingPeriodization.getContentPane().add(panel);
+		
+		//Group radio buttons together.
+		ButtonGroup group = new ButtonGroup();
+		
+	}
+}

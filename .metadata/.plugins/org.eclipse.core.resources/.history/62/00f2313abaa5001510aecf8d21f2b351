@@ -1,0 +1,108 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import java.awt.SystemColor;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class DUPGUI {
+
+	private JFrame frmDailyUndulatingPeriodization;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DUPGUI window = new DUPGUI();
+					window.frmDailyUndulatingPeriodization.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public DUPGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmDailyUndulatingPeriodization = new JFrame();
+		frmDailyUndulatingPeriodization.getContentPane().setBackground(new Color(0, 153, 204));
+		frmDailyUndulatingPeriodization.setTitle("Daily Undulating Periodization");
+		frmDailyUndulatingPeriodization.setBounds(100, 100, 314, 275);
+		frmDailyUndulatingPeriodization.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmDailyUndulatingPeriodization.getContentPane().setLayout(null);
+		
+		JLabel lblPleaseEnterYour = new JLabel("Please Enter Your One Rep Max:");
+		lblPleaseEnterYour.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblPleaseEnterYour.setBounds(23, 111, 256, 27);
+		frmDailyUndulatingPeriodization.getContentPane().add(lblPleaseEnterYour);
+		
+		JLabel lblSelectYourUnit = new JLabel("Select Your Unit of Measurement:\r\n");
+		lblSelectYourUnit.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblSelectYourUnit.setBounds(23, 21, 282, 27);
+		frmDailyUndulatingPeriodization.getContentPane().add(lblSelectYourUnit);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setBounds(119, 149, 49, 20);
+		frmDailyUndulatingPeriodization.getContentPane().add(textPane_1);
+		
+		JRadioButton rdbtnPounds = new JRadioButton("Pounds(lbs)");
+		rdbtnPounds.setBackground(new Color(0, 153, 204));
+		rdbtnPounds.setBounds(101, 55, 109, 23);
+		frmDailyUndulatingPeriodization.getContentPane().add(rdbtnPounds);
+		
+		JRadioButton rdbtnKilograms = new JRadioButton("Kilograms(k)");
+		rdbtnKilograms.setBackground(new Color(0, 153, 204));
+		rdbtnKilograms.setBounds(101, 81, 109, 23);
+		frmDailyUndulatingPeriodization.getContentPane().add(rdbtnKilograms);
+		
+		//Group Buttons together.
+		ButtonGroup group = new ButtonGroup();
+		group.add(rdbtnPounds);
+		group.add(rdbtnKilograms);
+		
+		JLabel lblUnit = new JLabel("");
+		lblUnit.setBounds(174, 155, 36, 14);
+		frmDailyUndulatingPeriodization.getContentPane().add(lblUnit);
+		
+		JButton btnContinue = new JButton("Continue");
+		btnContinue.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent arg0) {
+				
+				
+				//Check which radio button was selected.
+				if (rdbtnPounds.isSelected())
+				{
+					lblUnit.setText("lbs.");
+				}
+				else if (rdbtnKilograms.isSelected())
+				{
+					lblUnit.setText("kgs.");
+				}
+			}
+		});
+		btnContinue.setBounds(101, 180, 89, 39);
+		frmDailyUndulatingPeriodization.getContentPane().add(btnContinue);
+		
+	}
+}

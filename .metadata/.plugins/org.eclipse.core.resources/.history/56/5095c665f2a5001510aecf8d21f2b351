@@ -1,0 +1,93 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class Power extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Power frame = new Power();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Power() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 330, 346);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("3x2");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton.setBounds(56, 73, 89, 41);
+		contentPane.add(btnNewButton);
+		
+		JButton btnx = new JButton("3x3");
+		btnx.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx.setBounds(166, 73, 89, 41);
+		contentPane.add(btnx);
+		
+		JButton btnx_1 = new JButton("4x2");
+		btnx_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_1.setBounds(56, 125, 89, 41);
+		contentPane.add(btnx_1);
+		
+		JButton btnx_2 = new JButton("4x3");
+		btnx_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_2.setBounds(166, 125, 89, 41);
+		contentPane.add(btnx_2);
+		
+		JButton btnx_3 = new JButton("5x1");
+		btnx_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_3.setBounds(56, 177, 89, 41);
+		contentPane.add(btnx_3);
+		
+		JButton btnx_4 = new JButton("5x2");
+		btnx_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_4.setBounds(166, 177, 89, 41);
+		contentPane.add(btnx_4);
+		
+		JButton btnx_5 = new JButton("5x3");
+		btnx_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_5.setBounds(56, 229, 89, 41);
+		contentPane.add(btnx_5);
+		
+		JButton btnx_6 = new JButton("6x2");
+		btnx_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnx_6.setBounds(166, 229, 89, 41);
+		contentPane.add(btnx_6);
+		
+		JLabel lblSetsXReps = new JLabel("sets x reps");
+		lblSetsXReps.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblSetsXReps.setBounds(65, 48, 80, 14);
+		contentPane.add(lblSetsXReps);
+		
+		JLabel label = new JLabel("sets x reps");
+		label.setFont(new Font("Tahoma", Font.BOLD, 14));
+		label.setBounds(175, 48, 80, 14);
+		contentPane.add(label);
+	}
+
+}

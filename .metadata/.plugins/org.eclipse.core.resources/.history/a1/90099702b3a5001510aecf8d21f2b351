@@ -1,0 +1,67 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextPane;
+import javax.swing.JRadioButton;
+
+public class DUPGUI {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DUPGUI window = new DUPGUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public DUPGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 321, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblPleaseEnterYour = new JLabel("Please Enter Your One Rep Max:");
+		lblPleaseEnterYour.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblPleaseEnterYour.setBounds(23, 111, 256, 27);
+		frame.getContentPane().add(lblPleaseEnterYour);
+		
+		JLabel lblSelectYourUnit = new JLabel("Select Your Unit of Measurement:\r\n");
+		lblSelectYourUnit.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblSelectYourUnit.setBounds(23, 21, 282, 27);
+		frame.getContentPane().add(lblSelectYourUnit);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setBounds(119, 149, 49, 20);
+		frame.getContentPane().add(textPane_1);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Pounds(lbs)");
+		rdbtnNewRadioButton.setBounds(101, 55, 109, 23);
+		frame.getContentPane().add(rdbtnNewRadioButton);
+		
+		JRadioButton rdbtnKilogramsk = new JRadioButton("Kilograms(k)");
+		rdbtnKilogramsk.setBounds(101, 81, 109, 23);
+		frame.getContentPane().add(rdbtnKilogramsk);
+	}
+}

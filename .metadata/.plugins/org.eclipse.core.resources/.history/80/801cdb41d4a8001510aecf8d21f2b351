@@ -1,0 +1,119 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Power extends JFrame {
+
+	private JPanel contentPane;
+	double calculate = 0;
+
+	/**
+	 * Launch the application.
+	 */
+
+	/**
+	 * Create the frame.
+	 */
+	public Power() {
+		setTitle("Power");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 330, 380);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(153, 204, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblSetsXReps = new JLabel("sets x reps");
+		lblSetsXReps.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblSetsXReps.setBounds(65, 48, 80, 14);
+		contentPane.add(lblSetsXReps);
+		
+		JLabel label = new JLabel("sets x reps");
+		label.setFont(new Font("Tahoma", Font.BOLD, 14));
+		label.setBounds(175, 48, 80, 14);
+		contentPane.add(label);
+		
+		JLabel lblChooseASetrep = new JLabel("Choose a set/rep range:");
+		lblChooseASetrep.setFont(new Font("Vani", Font.BOLD, 22));
+		lblChooseASetrep.setBounds(20, 11, 294, 49);
+		contentPane.add(lblChooseASetrep);
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setFont(new Font("Vani", Font.BOLD, 20));
+		label_1.setBounds(262, 282, 42, 49);
+		contentPane.add(label_1);
+		
+		JLabel label_2 = new JLabel("for a");
+		label_2.setFont(new Font("Vani", Font.BOLD, 20));
+		label_2.setBounds(210, 282, 60, 49);
+		contentPane.add(label_2);
+		
+		JLabel lblCalculation = new JLabel("");
+		lblCalculation.setFont(new Font("Vani", Font.BOLD, 18));
+		lblCalculation.setBounds(176, 282, 33, 49);
+		contentPane.add(lblCalculation);
+		
+		JLabel label_4 = new JLabel("You should use");
+		label_4.setFont(new Font("Vani", Font.BOLD, 20));
+		label_4.setBounds(10, 282, 165, 49);
+		contentPane.add(label_4);
+		
+		JButton btn3x2 = new JButton("3x2");
+		btn3x2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DUPGUI x = new DUPGUI();
+				lblCalculation.setText(Double.toString(calculate));
+				}
+		});
+		btn3x2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn3x2.setBounds(56, 73, 89, 41);
+		contentPane.add(btn3x2);
+		
+		JButton btn3x3 = new JButton("3x3");
+		btn3x3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn3x3.setBounds(166, 73, 89, 41);
+		contentPane.add(btn3x3);
+		
+		JButton btn4x2 = new JButton("4x2");
+		btn4x2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn4x2.setBounds(56, 125, 89, 41);
+		contentPane.add(btn4x2);
+		
+		JButton btn4x3 = new JButton("4x3");
+		btn4x3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn4x3.setBounds(166, 125, 89, 41);
+		contentPane.add(btn4x3);
+		
+		JButton btn5x1 = new JButton("5x1");
+		btn5x1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn5x1.setBounds(56, 177, 89, 41);
+		contentPane.add(btn5x1);
+		
+		JButton btn5x2 = new JButton("5x2");
+		btn5x2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn5x2.setBounds(166, 177, 89, 41);
+		contentPane.add(btn5x2);
+		
+		JButton btn5x3 = new JButton("5x3");
+		btn5x3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn5x3.setBounds(56, 229, 89, 41);
+		contentPane.add(btn5x3);
+		
+		JButton btn6x2 = new JButton("6x2");
+		btn6x2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btn6x2.setBounds(166, 229, 89, 41);
+		contentPane.add(btn6x2);
+		
+	}
+
+}
